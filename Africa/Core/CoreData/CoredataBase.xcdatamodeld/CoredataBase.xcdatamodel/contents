@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="22522" systemVersion="22G436" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Animal" representedClassName="Animal" syncable="YES">
+        <attribute name="animalDescriptionCD" attributeType="String"/>
+        <attribute name="factCD" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="galleryCD" attributeType="Transformable" valueTransformerName="NSSecureUnarchiveFromData" customClassName="[String]"/>
+        <attribute name="headlineCD" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="imageCD" attributeType="String"/>
+        <attribute name="linkCD" attributeType="String"/>
+        <attribute name="nameCD" attributeType="String"/>
+    </entity>
+    <entity name="CoverImage" representedClassName="CoverImage" syncable="YES">
+        <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nameCD" attributeType="String"/>
+    </entity>
+</model>

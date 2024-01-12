@@ -9,7 +9,7 @@ import SwiftUI
 struct VideoListItemView: View {
   // MARK: - PROPERTIES
   
-  let video: Video
+  let video: VideoModel
 
   // MARK: - BODY
 
@@ -47,7 +47,7 @@ struct VideoListItemView: View {
 // MARK: - PREVIEW
 
 struct VideoListItem_Previews: PreviewProvider {
-  static let videos: [Video] = Bundle.main.decode("videos.json")
+  static let videos: [VideoModel] = Bundle.main.decode("videos.json")
   
   static var previews: some View {
     VideoListItemView(video: videos[0])

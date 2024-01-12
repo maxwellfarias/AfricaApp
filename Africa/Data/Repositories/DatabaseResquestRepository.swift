@@ -18,11 +18,11 @@ protocol DatabaseResquestRepositoryProtocol {
 }
 
 class DatabaseResquestRepository: DatabaseResquestRepositoryProtocol {
-    let db = PersistenceController.shared
+    @Injected(\.persistenceController) var persistenceController
     
     func fetchArrayOf<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void) {
 
-        db.fetch(T.self){ result in
+        persistenceController.fetch(T.self){ result in
             switch result {
             case .success (let animals):
                 completion(.success(animals))

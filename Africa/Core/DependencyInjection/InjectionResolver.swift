@@ -14,6 +14,7 @@ class InjectionResolver {
     lazy var respositoryFactory: RepositoryFactoryProtocol = RespositoryFactory()
     lazy var viewModelFactory: ViewModelFactoryProtocol = ViewModelFactory()
     lazy var useCaseFactory: UseCaseFactoryProtocol = UseCaseFactory()
+    lazy var serviceFactory: ServiceFactoryProtocol = ServiceFactory()
     
     //MARK: - Repositories
     lazy var homeRespositoy: DatabaseResquestRepositoryProtocol = respositoryFactory.createHomeRespository()
@@ -22,6 +23,6 @@ class InjectionResolver {
     lazy var homeViewModel: HomeScreenViewModel = viewModelFactory.createHomeViewModel()
     
     //MARK: - Service
-//    COLOCAR O PERSISTENCE CONTROLLER
+    lazy var persistenceController: PersistenceControllerProtocol = serviceFactory.createPersistenceController()
     
 }

@@ -89,9 +89,6 @@ struct HomeScreen: View {
                 }
             }
         }
-        .onAppear {
-//            homeScreenViewModel.fetchAnimals()
-        }
     }
 }
 

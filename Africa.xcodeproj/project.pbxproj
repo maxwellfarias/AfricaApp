@@ -60,8 +60,13 @@
 		5632B9D82B4AC89A0095A425 /* RepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632B9D72B4AC89A0095A425 /* RepositoryFactory.swift */; };
 		5632B9DA2B4ACD040095A425 /* UseCaseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632B9D92B4ACD040095A425 /* UseCaseFactory.swift */; };
 		5632B9DC2B4ACECA0095A425 /* ViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5632B9DB2B4ACEC90095A425 /* ViewModelFactory.swift */; };
+		565BEAA32B51352900CB2A94 /* AnimalVideo+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BEAA12B51352900CB2A94 /* AnimalVideo+CoreDataClass.swift */; };
+		565BEAA42B51352900CB2A94 /* AnimalVideo+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BEAA22B51352900CB2A94 /* AnimalVideo+CoreDataProperties.swift */; };
+		565BEAA62B513B0F00CB2A94 /* ServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565BEAA52B513B0F00CB2A94 /* ServiceFactory.swift */; };
 		566075452B505234008B4E39 /* CoverImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566075432B505234008B4E39 /* CoverImage+CoreDataClass.swift */; };
 		566075462B505234008B4E39 /* CoverImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566075442B505234008B4E39 /* CoverImage+CoreDataProperties.swift */; };
+		5660754B2B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566075492B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift */; };
+		5660754C2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660754A2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift */; };
 		568301C72B497C7B00D7E159 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568301C62B497C7B00D7E159 /* Injected.swift */; };
 		568301C92B497C8F00D7E159 /* InjectionResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568301C82B497C8F00D7E159 /* InjectionResolver.swift */; };
 		569CAA392B49CB3700B4EABD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569CAA382B49CB3700B4EABD /* PersistenceController.swift */; };
@@ -137,8 +142,13 @@
 		5632B9D72B4AC89A0095A425 /* RepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryFactory.swift; sourceTree = "<group>"; };
 		5632B9D92B4ACD040095A425 /* UseCaseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseFactory.swift; sourceTree = "<group>"; };
 		5632B9DB2B4ACEC90095A425 /* ViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelFactory.swift; sourceTree = "<group>"; };
+		565BEAA12B51352900CB2A94 /* AnimalVideo+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalVideo+CoreDataClass.swift"; sourceTree = "<group>"; };
+		565BEAA22B51352900CB2A94 /* AnimalVideo+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimalVideo+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		565BEAA52B513B0F00CB2A94 /* ServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceFactory.swift; sourceTree = "<group>"; };
 		566075432B505234008B4E39 /* CoverImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoverImage+CoreDataClass.swift"; sourceTree = "<group>"; };
 		566075442B505234008B4E39 /* CoverImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoverImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		566075492B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NationalParkLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5660754A2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NationalParkLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		568301C62B497C7B00D7E159 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		568301C82B497C8F00D7E159 /* InjectionResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionResolver.swift; sourceTree = "<group>"; };
 		569CAA382B49CB3700B4EABD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -352,6 +362,8 @@
 		562905292B4AC7670023A643 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				565BEAA02B51328200CB2A94 /* Video */,
+				5660754D2B506625008B4E39 /* NationalParkLocation */,
 				562F59412B50298600BF83E6 /* CoverImage */,
 				5629052A2B4AC7770023A643 /* Animal */,
 			);
@@ -376,6 +388,23 @@
 			path = CoverImage;
 			sourceTree = "<group>";
 		};
+		565BEAA02B51328200CB2A94 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				565BEAA12B51352900CB2A94 /* AnimalVideo+CoreDataClass.swift */,
+				565BEAA22B51352900CB2A94 /* AnimalVideo+CoreDataProperties.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		565BEAA72B51404000CB2A94 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				569CAA382B49CB3700B4EABD /* PersistenceController.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 		566075472B50563C008B4E39 /* AnimalDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +426,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		5660754D2B506625008B4E39 /* NationalParkLocation */ = {
+			isa = PBXGroup;
+			children = (
+				566075492B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift */,
+				5660754A2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift */,
+			);
+			path = NationalParkLocation;
+			sourceTree = "<group>";
+		};
 		568301C12B497B5200D7E159 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +447,7 @@
 		568301C22B497C0300D7E159 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				565BEAA72B51404000CB2A94 /* Service */,
 				562905262B4ABA400023A643 /* PreviewMockData */,
 				568301C52B497C3E00D7E159 /* Factories */,
 				568301C42B497C2B00D7E159 /* DependencyInjection */,
@@ -421,7 +460,6 @@
 			isa = PBXGroup;
 			children = (
 				562905292B4AC7670023A643 /* Entities */,
-				569CAA382B49CB3700B4EABD /* PersistenceController.swift */,
 				562F59362B50258700BF83E6 /* CoredataBase.xcdatamodeld */,
 			);
 			path = CoreData;
@@ -442,6 +480,7 @@
 				5632B9D72B4AC89A0095A425 /* RepositoryFactory.swift */,
 				5632B9D92B4ACD040095A425 /* UseCaseFactory.swift */,
 				5632B9DB2B4ACEC90095A425 /* ViewModelFactory.swift */,
+				565BEAA52B513B0F00CB2A94 /* ServiceFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -549,9 +588,11 @@
 				3A104CC225193BDE00585C5E /* ExternalWeblinkView.swift in Sources */,
 				3AA193E1250E68490048385D /* HomeScreen.swift in Sources */,
 				3ABA6DAE25122CFA0055EC8F /* AnimalListItemView.swift in Sources */,
+				565BEAA42B51352900CB2A94 /* AnimalVideo+CoreDataProperties.swift in Sources */,
 				566075462B505234008B4E39 /* CoverImage+CoreDataProperties.swift in Sources */,
 				3AA19413250E78260048385D /* MainView.swift in Sources */,
 				3A2E2B8325192DF600124A4E /* InsetFactView.swift in Sources */,
+				5660754B2B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift in Sources */,
 				568301C92B497C8F00D7E159 /* InjectionResolver.swift in Sources */,
 				568301C72B497C7B00D7E159 /* Injected.swift in Sources */,
 				562F593C2B5026E100BF83E6 /* Animal+CoreDataProperties.swift in Sources */,
@@ -561,6 +602,7 @@
 				3ABA6DB1251230B60055EC8F /* AnimalModel.swift in Sources */,
 				562F593B2B5026E100BF83E6 /* Animal+CoreDataClass.swift in Sources */,
 				5629052C2B4ACB340023A643 /* DatabaseResquestRepository.swift in Sources */,
+				5660754C2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift in Sources */,
 				5632B9DC2B4ACECA0095A425 /* ViewModelFactory.swift in Sources */,
 				25B33DB12B4801E6003C81A6 /* HomeScreenViewModel.swift in Sources */,
 				3AA1940F250E779D0048385D /* MapView.swift in Sources */,
@@ -570,6 +612,7 @@
 				5632B9D82B4AC89A0095A425 /* RepositoryFactory.swift in Sources */,
 				3A76331F252DB31D008185E5 /* MapAnnotationView.swift in Sources */,
 				3AA1940D250E77570048385D /* VideoListView.swift in Sources */,
+				565BEAA62B513B0F00CB2A94 /* ServiceFactory.swift in Sources */,
 				3A0BF751251CAB03001AFFD3 /* VideoModel.swift in Sources */,
 				3AA19411250E77EE0048385D /* GalleryView.swift in Sources */,
 				3A4620B1252CB5DF0083293A /* LocationModel.swift in Sources */,
@@ -582,6 +625,7 @@
 				3A69A7532543038800B8D98E /* CreditsView.swift in Sources */,
 				3A2BF6ED2511288F001058E1 /* CodableBundleExtension.swift in Sources */,
 				3A1DB3A625323CDB00BA4830 /* MotionAnimationView.swift in Sources */,
+				565BEAA32B51352900CB2A94 /* AnimalVideo+CoreDataClass.swift in Sources */,
 				3A69A758254307AF00B8D98E /* CenterModifier.swift in Sources */,
 				3AC26D032516636400FE7EAB /* HeadingView.swift in Sources */,
 				5629052E2B4AD0450023A643 /* DatabaseResquestUseCase.swift in Sources */,

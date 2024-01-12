@@ -12,15 +12,15 @@ enum PreloadResult {
     case failure(String)
 }
 
-//MODIFICAR PARA INJECAO DE DEPENDENCIA - FABRIC PATTERN
-//COLOCAR PROTOCOLOS PARA TODAS AS FUNCOES
+protocol PersistenceControllerProtocol {
+    func fetch<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void)
+}
 //IMPLEMENTAR OS TESTES
-struct PersistenceController {
-    static let shared = PersistenceController()
+struct PersistenceController: PersistenceControllerProtocol {
     
     let container: NSPersistentContainer
     
-    private init() {
+    init() {
         container = NSPersistentContainer(name: "CoredataBase")
         container.loadPersistentStores { description, error in
             if let error {
@@ -66,17 +66,17 @@ struct PersistenceController {
         }
     }
     
-    //    A CLASSE DEVE SER GENERICA,n
-    
-    
-    //    PASSAR UM GENERICO E UMA URL DO ARQUIVO
     private func preloadData(completion: @escaping (PreloadResult) -> Void){
         let animals: [AnimalModel] = Bundle.main.decode("animals.json")
         let coverImages: [CoverImageModel] = Bundle.main.decode("covers.json")
+        let locations: [NationalParkLocationModel] = Bundle.main.decode("locations.json")
+        let videos: [VideoModel] = Bundle.main.decode("videos.json")
         
         do {
-            try saveAnimalsData(animals: animals)
+            try saveAnimalDatas(animals: animals)
             try saveCoverImages(converImages: coverImages)
+            try saveNationalParkLocations(locations: locations)
+            try saveVideos(videos: videos)
             completion(.success)
             
         } catch (let error){
@@ -84,7 +84,7 @@ struct PersistenceController {
         }
     }
     
-    private func saveAnimalsData(animals: [AnimalModel]) throws {
+    private func saveAnimalDatas(animals: [AnimalModel]) throws {
         for animal in animals {
             let animalToSave = Animal(context: container.viewContext)
             animalToSave.id = animal.id
@@ -96,7 +96,6 @@ struct PersistenceController {
             animalToSave.galleryCD = animal.gallery
             animalToSave.factCD = animal.fact
         }
-        
         try container.viewContext.save()
         
         UserDefaults.standard.setValue(true, forKey: "isLoadedData")
@@ -109,7 +108,28 @@ struct PersistenceController {
             coverImageToSave.id = coverImage.id
             coverImageToSave.nameCD = coverImage.name
         }
-        
+        try container.viewContext.save()
+    }
+    
+    private func saveNationalParkLocations(locations: [NationalParkLocationModel]) throws {
+        for location in locations {
+            let locationToSave = NationalParkLocation(context: container.viewContext)
+            locationToSave.id = location.id
+            locationToSave.nameCD = location.name
+            locationToSave.imageCD = location.image
+            locationToSave.latitude = location.latitude
+            locationToSave.longitude = location.longitude
+        }
+        try container.viewContext.save()
+    }
+    
+    private func saveVideos(videos: [VideoModel]) throws {
+        for video in videos {
+            let videoToSave = AnimalVideo(context: container.viewContext)
+            videoToSave.id = video.id
+            videoToSave.nameCD = video.name
+            videoToSave.headlineCD = video.headline
+        }
         try container.viewContext.save()
     }
 }

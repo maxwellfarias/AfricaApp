@@ -10,8 +10,20 @@
         <attribute name="linkCD" attributeType="String"/>
         <attribute name="nameCD" attributeType="String"/>
     </entity>
+    <entity name="AnimalVideo" representedClassName="AnimalVideo" syncable="YES">
+        <attribute name="headlineCD" attributeType="String"/>
+        <attribute name="id" attributeType="String"/>
+        <attribute name="nameCD" attributeType="String"/>
+    </entity>
     <entity name="CoverImage" representedClassName="CoverImage" syncable="YES">
         <attribute name="id" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nameCD" attributeType="String"/>
+    </entity>
+    <entity name="NationalParkLocation" representedClassName="NationalParkLocation" syncable="YES">
+        <attribute name="id" attributeType="String"/>
+        <attribute name="imageCD" attributeType="String"/>
+        <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
+        <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="nameCD" attributeType="String"/>
     </entity>
 </model>

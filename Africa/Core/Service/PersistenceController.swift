@@ -13,7 +13,7 @@ enum PreloadResult {
 }
 
 protocol PersistenceControllerProtocol {
-    func fetch<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void)
+    func fetchArrayOf<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void)
 }
 //IMPLEMENTAR OS TESTES
 struct PersistenceController: PersistenceControllerProtocol {
@@ -31,7 +31,7 @@ struct PersistenceController: PersistenceControllerProtocol {
         }
     }
     
-    func fetch<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void) {
+    func fetchArrayOf<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void) {
         if !UserDefaults.standard.bool(forKey: "isLoadedData") {
             
             preloadData { result in

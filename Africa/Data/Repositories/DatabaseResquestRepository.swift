@@ -22,14 +22,13 @@ class DatabaseResquestRepository: DatabaseResquestRepositoryProtocol {
     
     func fetchArrayOf<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void) {
 
-        persistenceController.fetch(T.self){ result in
+        persistenceController.fetchArrayOf(T.self){ result in
             switch result {
             case .success (let animals):
                 completion(.success(animals))
             case .failure(let error):
                 completion(.failure(error))
             }
-                
         }
     }
 }

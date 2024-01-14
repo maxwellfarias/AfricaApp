@@ -7,11 +7,7 @@
 import SwiftUI
 
 struct InsetGalleryView: View {
-  // MARK: - PROPERTIES
-  
   let animal: Animal
-  
-  // MARK: - BODY
 
   var body: some View {
     ScrollView(.horizontal, showsIndicators: false) {
@@ -22,13 +18,11 @@ struct InsetGalleryView: View {
             .scaledToFit()
             .frame(height: 200)
             .cornerRadius(12)
-        } //: LOOP
-      } //: HSTACK
-    } //: SCROLL
+        }
+      }
+    }
   }
 }
-
-// MARK: - PREVIEW
 
 struct InsetGalleryView_Previews: PreviewProvider {
   

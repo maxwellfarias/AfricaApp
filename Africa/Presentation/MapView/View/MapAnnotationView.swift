@@ -7,12 +7,9 @@
 import SwiftUI
 
 struct MapAnnotationView: View {
-  // MARK: - PROPERTIES
   
   var location: NationalParkLocationModel
   @State private var animation: Double = 0.0
-  
-  // MARK: - BODY
 
   var body: some View {
     ZStack {
@@ -31,7 +28,7 @@ struct MapAnnotationView: View {
         .scaledToFit()
         .frame(width: 48, height: 48, alignment: .center)
         .clipShape(Circle())
-    } //: ZSTACK
+    }
     .onAppear {
       withAnimation(Animation.easeOut(duration: 2).repeatForever(autoreverses: false)) {
         animation = 1
@@ -39,8 +36,6 @@ struct MapAnnotationView: View {
     }
   }
 }
-
-// MARK: - PREVIEW
 
 struct MapAnnotationView_Previews: PreviewProvider {
   static var locations: [NationalParkLocationModel] = Bundle.main.decode("locations.json")

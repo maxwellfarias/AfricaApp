@@ -54,6 +54,9 @@
 		562905282B4ABA8B0023A643 /* PreviewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562905272B4ABA8B0023A643 /* PreviewData.swift */; };
 		5629052C2B4ACB340023A643 /* DatabaseResquestRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629052B2B4ACB340023A643 /* DatabaseResquestRepository.swift */; };
 		5629052E2B4AD0450023A643 /* DatabaseResquestUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5629052D2B4AD0450023A643 /* DatabaseResquestUseCase.swift */; };
+		562E02FA2B55B674009970C0 /* VideoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562E02F92B55B674009970C0 /* VideoListViewModel.swift */; };
+		562E02FD2B55BC5D009970C0 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562E02FC2B55BC5D009970C0 /* MapViewModel.swift */; };
+		562E03002B55C1E9009970C0 /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562E02FF2B55C1E9009970C0 /* GalleryViewModel.swift */; };
 		562F59382B50258700BF83E6 /* CoredataBase.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 562F59362B50258700BF83E6 /* CoredataBase.xcdatamodeld */; };
 		562F593B2B5026E100BF83E6 /* Animal+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F59392B5026E100BF83E6 /* Animal+CoreDataClass.swift */; };
 		562F593C2B5026E100BF83E6 /* Animal+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 562F593A2B5026E100BF83E6 /* Animal+CoreDataProperties.swift */; };
@@ -136,6 +139,9 @@
 		562905272B4ABA8B0023A643 /* PreviewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewData.swift; sourceTree = "<group>"; };
 		5629052B2B4ACB340023A643 /* DatabaseResquestRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseResquestRepository.swift; sourceTree = "<group>"; };
 		5629052D2B4AD0450023A643 /* DatabaseResquestUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DatabaseResquestUseCase.swift; path = Africa/Data/Repositories/DatabaseResquestUseCase.swift; sourceTree = SOURCE_ROOT; };
+		562E02F92B55B674009970C0 /* VideoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListViewModel.swift; sourceTree = "<group>"; };
+		562E02FC2B55BC5D009970C0 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		562E02FF2B55C1E9009970C0 /* GalleryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
 		562F59372B50258700BF83E6 /* CoredataBase.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoredataBase.xcdatamodel; sourceTree = "<group>"; };
 		562F59392B5026E100BF83E6 /* Animal+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataClass.swift"; sourceTree = "<group>"; };
 		562F593A2B5026E100BF83E6 /* Animal+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Animal+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -363,6 +369,22 @@
 			path = Animal;
 			sourceTree = "<group>";
 		};
+		562E02FB2B55BC37009970C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				562E02FC2B55BC5D009970C0 /* MapViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		562E02FE2B55C1D3009970C0 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				562E02FF2B55C1E9009970C0 /* GalleryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		562F59412B50298600BF83E6 /* CoverImage */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +392,14 @@
 				566075442B505234008B4E39 /* CoverImage+CoreDataProperties.swift */,
 			);
 			path = CoverImage;
+			sourceTree = "<group>";
+		};
+		564E41692B55B5F0006E9088 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				562E02F92B55B674009970C0 /* VideoListViewModel.swift */,
+			);
+			name = ViewModel;
 			sourceTree = "<group>";
 		};
 		564FA3F92B5367DE008DCE6C /* Home */ = {
@@ -384,6 +414,7 @@
 		564FA3FA2B536820008DCE6C /* VideoListView */ = {
 			isa = PBXGroup;
 			children = (
+				564E41692B55B5F0006E9088 /* ViewModel */,
 				564FA3FB2B536832008DCE6C /* View */,
 			);
 			name = VideoListView;
@@ -402,6 +433,7 @@
 		564FA3FC2B536859008DCE6C /* MapView */ = {
 			isa = PBXGroup;
 			children = (
+				562E02FB2B55BC37009970C0 /* ViewModel */,
 				564FA3FD2B536863008DCE6C /* View */,
 			);
 			path = MapView;
@@ -419,6 +451,7 @@
 		564FA3FE2B536873008DCE6C /* GalleryView */ = {
 			isa = PBXGroup;
 			children = (
+				562E02FE2B55C1D3009970C0 /* ViewModel */,
 				564FA3FF2B53687B008DCE6C /* View */,
 			);
 			path = GalleryView;
@@ -643,6 +676,7 @@
 			files = (
 				3A104CC225193BDE00585C5E /* ExternalWeblinkView.swift in Sources */,
 				3AA193E1250E68490048385D /* HomeScreen.swift in Sources */,
+				562E02FA2B55B674009970C0 /* VideoListViewModel.swift in Sources */,
 				3ABA6DAE25122CFA0055EC8F /* AnimalListItemView.swift in Sources */,
 				565BEAA42B51352900CB2A94 /* AnimalVideo+CoreDataProperties.swift in Sources */,
 				566075462B505234008B4E39 /* CoverImage+CoreDataProperties.swift in Sources */,
@@ -651,6 +685,7 @@
 				5660754B2B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift in Sources */,
 				568301C92B497C8F00D7E159 /* InjectionResolver.swift in Sources */,
 				568301C72B497C7B00D7E159 /* Injected.swift in Sources */,
+				562E03002B55C1E9009970C0 /* GalleryViewModel.swift in Sources */,
 				562F593C2B5026E100BF83E6 /* Animal+CoreDataProperties.swift in Sources */,
 				3A2BF6E7251124B0001058E1 /* CoverImageView.swift in Sources */,
 				3A2BF6EA251127BA001058E1 /* CoverImageModel.swift in Sources */,
@@ -679,6 +714,7 @@
 				3AC26D062516669F00FE7EAB /* InsetGalleryView.swift in Sources */,
 				3A0BF754251CAB66001AFFD3 /* VideoListItemView.swift in Sources */,
 				3A69A7532543038800B8D98E /* CreditsView.swift in Sources */,
+				562E02FD2B55BC5D009970C0 /* MapViewModel.swift in Sources */,
 				3A2BF6ED2511288F001058E1 /* CodableBundleExtension.swift in Sources */,
 				3A1DB3A625323CDB00BA4830 /* MotionAnimationView.swift in Sources */,
 				565BEAA32B51352900CB2A94 /* AnimalVideo+CoreDataClass.swift in Sources */,

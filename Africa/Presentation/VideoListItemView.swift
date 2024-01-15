@@ -7,11 +7,7 @@
 import SwiftUI
 
 struct VideoListItemView: View {
-  // MARK: - PROPERTIES
-  
-  let video: VideoModel
-
-  // MARK: - BODY
+  let video: AnimalVideo
 
   var body: some View {
     HStack(spacing: 10) {
@@ -27,7 +23,7 @@ struct VideoListItemView: View {
           .scaledToFit()
           .frame(height: 32)
           .shadow(radius: 4)
-      } //: ZSTACK
+      }
       
       VStack(alignment: .leading, spacing: 10) {
         Text(video.name)
@@ -39,18 +35,14 @@ struct VideoListItemView: View {
           .font(.footnote)
           .multilineTextAlignment(.leading)
           .lineLimit(2)
-      } //: VSTACK
-    } //: HSTACK
+      }
+    }
   }
 }
 
-// MARK: - PREVIEW
-
 struct VideoListItem_Previews: PreviewProvider {
-  static let videos: [VideoModel] = Bundle.main.decode("videos.json")
-  
   static var previews: some View {
-    VideoListItemView(video: videos[0])
+      VideoListItemView(video: PreviewData.listVideoViewModel.videos[0])
       .previewLayout(.sizeThatFits)
       .padding()
   }

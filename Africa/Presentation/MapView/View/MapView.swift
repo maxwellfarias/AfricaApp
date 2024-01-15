@@ -17,8 +17,9 @@ struct MapView: View {
     
     return mapRegion
   }()
+    @ObservedObject var mapViewModel: MapViewModel
   
-  let locations: [NationalParkLocationModel] = Bundle.main.decode("locations.json")
+//  let locations: [NationalParkLocation] = Bundle.main.decode("locations.json")
   
   // MARK: - BODY
   
@@ -27,7 +28,7 @@ struct MapView: View {
     // Map(coordinateRegion: $region)
     
     // MARK: - No2 ADVANCED MAP
-    Map(coordinateRegion: $region, annotationItems: locations, annotationContent: { item in
+      Map(coordinateRegion: $region, annotationItems: mapViewModel.locations, annotationContent: { item in
       // (A) PIN: OLD STYLE (always static)
       // MapPin(coordinate: item.location, tint: .accentColor)
       
@@ -97,7 +98,7 @@ struct MapView: View {
 
 struct MapView_Previews: PreviewProvider {
   static var previews: some View {
-    MapView()
+      MapView(mapViewModel: PreviewData.mapViewModel)
       .previewDevice("iPhone 13")
   }
 }

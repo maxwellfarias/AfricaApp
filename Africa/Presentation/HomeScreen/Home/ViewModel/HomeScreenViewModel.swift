@@ -21,8 +21,6 @@ class HomeScreenViewModel: ObservableObject {
         self.databaseRequestUseCase = databaseRequestUseCase
         fetchAnimals()
         fetchCoverImages()
-        fetchLacations()
-        fetchVideos()
     }
 
     func fetchAnimals() {
@@ -31,6 +29,8 @@ class HomeScreenViewModel: ObservableObject {
             case .success(let animalsResult):
                 if let animals = animalsResult as? [Animal] {
                     self.animals = animals
+                } else {
+                    print("Failed when trying to convert list to type Animal")
                 }
                 
             case .failure(let error):
@@ -45,37 +45,12 @@ class HomeScreenViewModel: ObservableObject {
             case .success(let coverImagesResult):
                 if let coverImages = coverImagesResult as? [CoverImage] {
                     self.coverImages = coverImages
+                } else {
+                    print("Failed when trying to convert list to type CoverImage")
                 }
             case .failure(let error):
                 print("Error when fetching for conver images in the database: \(error.description)")
             }
         }
     }
-    
-    func fetchLacations() {
-        databaseRequestUseCase.fetchArrayOf(NationalParkLocation.self) { result in
-            switch result {
-            case .success(let locationResult):
-                if let locations = locationResult as? [NationalParkLocation] {
-                    self.locations = locations
-                }
-            case .failure(let error):
-                print("Error when fetching for locations in the database: \(error.description)")
-            }
-        }
-    }
-    
-    func fetchVideos() {
-        databaseRequestUseCase.fetchArrayOf(AnimalVideo.self) { result in
-            switch result {
-            case .success(let videosResult):
-                if let videos = videosResult as? [AnimalVideo] {
-                    self.videos = videos
-                }
-            case .failure(let error):
-                print("Error when fetching for videos in the database: \(error.description)")
-            }
-        }
-    }
-    
 }

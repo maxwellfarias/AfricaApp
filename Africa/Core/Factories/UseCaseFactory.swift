@@ -8,11 +8,11 @@
 import Foundation
 
 protocol UseCaseFactoryProtocol {
-    func createHomeUseCase() -> DatabaseResquestUseCaseProtocol
+    func createDatabaseRequestUseCase() -> DatabaseResquestUseCaseProtocol
 }
 
 class UseCaseFactory: UseCaseFactoryProtocol {
-    func createHomeUseCase() -> DatabaseResquestUseCaseProtocol {
+    func createDatabaseRequestUseCase() -> DatabaseResquestUseCaseProtocol {
         return DatabaseResquestUseCase()
     }
 }

@@ -21,6 +21,9 @@ class InjectionResolver {
     
     //MARK: - View Models
     lazy var homeViewModel: HomeScreenViewModel = viewModelFactory.createHomeViewModel()
+    lazy var videoListViewModel: VideoListViewModel = viewModelFactory.createVideoListViewModel()
+    lazy var mapViewModel: MapViewModel = viewModelFactory.createMapViewModel()
+    lazy var galleryViewModel: GalleryViewModel = viewModelFactory.createGalleryViewModel()
     
     //MARK: - Service
     lazy var persistenceController: PersistenceControllerProtocol = serviceFactory.createPersistenceController()

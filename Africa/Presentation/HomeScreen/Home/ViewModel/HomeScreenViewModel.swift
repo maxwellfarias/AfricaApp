@@ -12,8 +12,6 @@ class HomeScreenViewModel: ObservableObject {
     
     @Published var animals: [Animal] = []
     @Published var coverImages: [CoverImage] = []
-    @Published var locations: [NationalParkLocation] = []
-    @Published var videos: [AnimalVideo] = []
     
     var databaseRequestUseCase: DatabaseResquestUseCaseProtocol
     

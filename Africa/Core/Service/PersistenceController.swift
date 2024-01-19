@@ -13,6 +13,7 @@ enum PreloadResult {
 }
 
 protocol PersistenceControllerProtocol {
+    var container: NSPersistentContainer {get}
     func fetchArrayOf<T: NSManagedObject>(_ type: T.Type, completion: @escaping (FetchResult) -> Void)
 }
 //IMPLEMENTAR OS TESTES
@@ -67,12 +68,12 @@ struct PersistenceController: PersistenceControllerProtocol {
     }
     
     private func preloadData(completion: @escaping (PreloadResult) -> Void){
-        let animals: [AnimalModel] = Bundle.main.decode("animals.json")
-        let coverImages: [CoverImageModel] = Bundle.main.decode("covers.json")
-        let locations: [NationalParkLocationModel] = Bundle.main.decode("locations.json")
-        let videos: [VideoModel] = Bundle.main.decode("videos.json")
-        
         do {
+            let animals: [AnimalModel] = try Bundle.main.decode("animals.json")
+            let coverImages: [CoverImageModel] = try Bundle.main.decode("covers.json")
+            let locations: [NationalParkLocationModel] = try Bundle.main.decode("locations.json")
+            let videos: [VideoModel] = try Bundle.main.decode("videos.json")
+            
             try saveAnimalDatas(animals: animals)
             try saveCoverImages(converImages: coverImages)
             try saveNationalParkLocations(locations: locations)

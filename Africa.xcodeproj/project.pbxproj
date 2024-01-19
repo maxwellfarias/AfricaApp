@@ -70,10 +70,22 @@
 		566075462B505234008B4E39 /* CoverImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566075442B505234008B4E39 /* CoverImage+CoreDataProperties.swift */; };
 		5660754B2B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 566075492B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift */; };
 		5660754C2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5660754A2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift */; };
+		567BD6C52B59DF1600BB5406 /* Africa_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567BD6C42B59DF1600BB5406 /* Africa_Tests.swift */; };
+		567BD6CC2B59DF6900BB5406 /* HomeScreenViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567BD6CB2B59DF6900BB5406 /* HomeScreenViewModel_Tests.swift */; };
 		568301C72B497C7B00D7E159 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568301C62B497C7B00D7E159 /* Injected.swift */; };
 		568301C92B497C8F00D7E159 /* InjectionResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568301C82B497C8F00D7E159 /* InjectionResolver.swift */; };
 		569CAA392B49CB3700B4EABD /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569CAA382B49CB3700B4EABD /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		567BD6C62B59DF1600BB5406 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3AA193D3250E68490048385D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3AA193DA250E68490048385D;
+			remoteInfo = Africa;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3AD9800825432E6A00349392 /* Embed Foundation Extensions */ = {
@@ -155,6 +167,9 @@
 		566075442B505234008B4E39 /* CoverImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CoverImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		566075492B506530008B4E39 /* NationalParkLocation+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NationalParkLocation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5660754A2B506530008B4E39 /* NationalParkLocation+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NationalParkLocation+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		567BD6C22B59DF1600BB5406 /* Africa_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Africa_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		567BD6C42B59DF1600BB5406 /* Africa_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Africa_Tests.swift; sourceTree = "<group>"; };
+		567BD6CB2B59DF6900BB5406 /* HomeScreenViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreenViewModel_Tests.swift; sourceTree = "<group>"; };
 		568301C62B497C7B00D7E159 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		568301C82B497C8F00D7E159 /* InjectionResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InjectionResolver.swift; sourceTree = "<group>"; };
 		569CAA382B49CB3700B4EABD /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
@@ -162,6 +177,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		3AA193D8250E68490048385D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		567BD6BF2B59DF1600BB5406 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -268,6 +290,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA193DD250E68490048385D /* Africa */,
+				567BD6C32B59DF1600BB5406 /* Africa_Tests */,
 				3AA193DC250E68490048385D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -276,6 +299,7 @@
 			isa = PBXGroup;
 			children = (
 				3AA193DB250E68490048385D /* Africa.app */,
+				567BD6C22B59DF1600BB5406 /* Africa_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -524,6 +548,15 @@
 			path = NationalParkLocation;
 			sourceTree = "<group>";
 		};
+		567BD6C32B59DF1600BB5406 /* Africa_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				567BD6C42B59DF1600BB5406 /* Africa_Tests.swift */,
+				567BD6CB2B59DF6900BB5406 /* HomeScreenViewModel_Tests.swift */,
+			);
+			path = Africa_Tests;
+			sourceTree = "<group>";
+		};
 		568301C12B497B5200D7E159 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -611,17 +644,39 @@
 			productReference = 3AA193DB250E68490048385D /* Africa.app */;
 			productType = "com.apple.product-type.application";
 		};
+		567BD6C12B59DF1600BB5406 /* Africa_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 567BD6CA2B59DF1600BB5406 /* Build configuration list for PBXNativeTarget "Africa_Tests" */;
+			buildPhases = (
+				567BD6BE2B59DF1600BB5406 /* Sources */,
+				567BD6BF2B59DF1600BB5406 /* Frameworks */,
+				567BD6C02B59DF1600BB5406 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				567BD6C72B59DF1600BB5406 /* PBXTargetDependency */,
+			);
+			name = Africa_Tests;
+			productName = Africa_Tests;
+			productReference = 567BD6C22B59DF1600BB5406 /* Africa_Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3AA193D3250E68490048385D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					3AA193DA250E68490048385D = {
 						CreatedOnToolsVersion = 12.0;
+					};
+					567BD6C12B59DF1600BB5406 = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 3AA193DA250E68490048385D;
 					};
 				};
 			};
@@ -639,6 +694,7 @@
 			projectRoot = "";
 			targets = (
 				3AA193DA250E68490048385D /* Africa */,
+				567BD6C12B59DF1600BB5406 /* Africa_Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -664,6 +720,13 @@
 				3AA193E3250E684A0048385D /* Assets.xcassets in Resources */,
 				3AA19400250E72170048385D /* rhino.mp4 in Resources */,
 				3AA193FE250E72170048385D /* cheetah.mp4 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		567BD6C02B59DF1600BB5406 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -727,7 +790,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		567BD6BE2B59DF1600BB5406 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				567BD6C52B59DF1600BB5406 /* Africa_Tests.swift in Sources */,
+				567BD6CC2B59DF6900BB5406 /* HomeScreenViewModel_Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		567BD6C72B59DF1600BB5406 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3AA193DA250E68490048385D /* Africa */;
+			targetProxy = 567BD6C62B59DF1600BB5406 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		3AA193E8250E684A0048385D /* Debug */ = {
@@ -894,6 +974,55 @@
 			};
 			name = Release;
 		};
+		567BD6C82B59DF1600BB5406 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7J2HG4L68;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maxwell.Africa-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Africa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Africa";
+			};
+			name = Debug;
+		};
+		567BD6C92B59DF1600BB5406 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T7J2HG4L68;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "maxwell.Africa-Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Africa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Africa";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -911,6 +1040,15 @@
 			buildConfigurations = (
 				3AA193EB250E684A0048385D /* Debug */,
 				3AA193EC250E684A0048385D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		567BD6CA2B59DF1600BB5406 /* Build configuration list for PBXNativeTarget "Africa_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				567BD6C82B59DF1600BB5406 /* Debug */,
+				567BD6C92B59DF1600BB5406 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
